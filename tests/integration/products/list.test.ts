@@ -5,6 +5,7 @@ import productMock from '../../mocks/product.mock';
 import ProductModel from '../../../src/database/models/product.model'
 import app from '../../../src/app'
 import { Product } from '../../../src/types/Product';
+import { object } from 'joi';
 
 chai.use(chaiHttp);
 
@@ -13,13 +14,14 @@ describe('GET /products', function () {
   it('Lista todos os produtos cadastrados', async function () {
      // Arrange
      const mockReturn = ProductModel.bulkBuild(productMock.listReturn)
+     const mockFiltered = mockReturn.map((filtered) => filtered.dataValues)
      sinon.stub(ProductModel, 'findAll').resolves(mockReturn);
  
      // Act
      const httpResponse = await chai.request(app).get('/products').send();
- 
+  
      // Assert
      expect(httpResponse.status).to.equal(200);
-     expect(httpResponse.body).to.deep.eq(mockReturn);
+     expect(httpResponse.body).to.deep.eq(mockFiltered);
   })
 });
