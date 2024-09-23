@@ -12,8 +12,8 @@ describe('POST /products', function () {
   it('Ao receber dados válidos, retorne o produto criado', async function () {
     // Arrange
     const httpRequestBody = productMock.validProductBody
-    const mockFindOneReturn = ProductModel.build(productMock.validProductBody)
-    sinon.stub(ProductModel, 'create').resolves(mockFindOneReturn);
+    const mockReturn = ProductModel.build(productMock.validProductBody)
+    sinon.stub(ProductModel, 'create').resolves(mockReturn);
 
     // Act
     const httpResponse = await chai.request(app).post('/products').send(httpRequestBody);

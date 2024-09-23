@@ -7,6 +7,12 @@ async function createProduct(product: Product): Promise<Model<Product, ProductIn
   return newProduct;
 }
 
+async function listProducts(): Promise<Model<Product, ProductInputtableTypes>[]> {
+  const list = await ProductModel.findAll();
+  return list;
+}
+
 export default {
   createProduct,
+  listProducts,
 };
