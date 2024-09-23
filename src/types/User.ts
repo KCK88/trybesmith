@@ -6,3 +6,8 @@ export type User = {
   password: string;
   productIds?: number;
 };
+
+export type Users = {
+  username: string;
+  productIds: number[];
+};
