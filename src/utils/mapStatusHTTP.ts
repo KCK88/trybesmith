@@ -4,6 +4,7 @@ export const http: Record<string, number> = {
   NOT_FOUND: 404,
   BAD_REQUEST: 400,
   UNAUTHORIZED: 401,
+  UNPROCESSABLE: 422,
 };
   
 const mapStatusHTTP = (status: keyof typeof http): number => http[status] || 500;

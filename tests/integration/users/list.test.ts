@@ -22,7 +22,6 @@ describe('GET /users', function () {
     
     // Act
     const httpResponse = await chai.request(app).get('/users').send();
-    console.log(httpResponse.body);
  
     
     // Assert

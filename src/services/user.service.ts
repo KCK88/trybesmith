@@ -19,6 +19,12 @@ async function listUsers(): Promise<Users[] | UserSequelizeModel[]> {
   }));
   return users;
 }
+
+async function findUser(id: number): Promise<UserSequelizeModel | null> {
+  const user = await UserModel.findByPk(id);
+  return user;
+}
 export default {
   listUsers,
+  findUser,
 };

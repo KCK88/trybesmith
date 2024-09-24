@@ -7,10 +7,10 @@ const app = express();
 
 app.use(express.json());
 
-app.use(productRouter);
-
 app.use(userRouter);
 
 app.use(loginRouter);
+
+app.use(productRouter);
 
 export default app;
