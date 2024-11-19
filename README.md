@@ -1,10 +1,5 @@
-# :construction: README em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto.
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+Neste projeto, eu criei uma loja de itens medievais, como espadas feitas sob encomenda para uma pessoa específica, no formato de uma API, utilizando TypeScript e Sequelize.
+
+Eu desenvolvi as camadas de Service e Controllers da aplicação, utilizando JWT para autenticar algumas rotas, garantindo a segurança em operações sensíveis. Além disso, implementei testes para garantir o correto funcionamento da aplicação.
+
+A API possui endpoints que suportam operações de criação, leitura e atualização de informações, permitindo a gestão dos itens disponíveis na loja e a personalização dos pedidos.
